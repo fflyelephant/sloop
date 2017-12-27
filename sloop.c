@@ -79,9 +79,9 @@ static void init_list_pools(void)
 	memset(_sloop_sockets, 0, sizeof(_sloop_sockets));
 	memset(_sloop_timeout, 0, sizeof(_sloop_timeout));
 	memset(_sloop_signals, 0, sizeof(_sloop_signals));
-	for (i = 0; i < MAX_SLOOP_SOCKET; i++) dlist_add(&_sloop_sockets[i].list, &sloop.free_sockets);
-	for (i = 0; i < MAX_SLOOP_TIMEOUT; i++) dlist_add(&_sloop_timeout[i].list, &sloop.free_timeout);
-	for (i = 0; i < MAX_SLOOP_SIGNAL; i++) dlist_add(&_sloop_signals[i].list, &sloop.free_signals);
+	for (i = 0; i < MAX_SLOOP_SOCKET;  i++)  dlist_add(&_sloop_sockets[i].list, &sloop.free_sockets);
+	for (i = 0; i < MAX_SLOOP_TIMEOUT; i++)  dlist_add(&_sloop_timeout[i].list, &sloop.free_timeout);
+	for (i = 0; i < MAX_SLOOP_SIGNAL;  i++)  dlist_add(&_sloop_signals[i].list, &sloop.free_signals);
 }
 
 /* get socket from pool */

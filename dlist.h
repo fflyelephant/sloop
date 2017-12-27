@@ -29,7 +29,7 @@ static inline void __dlist_del(dlist_t * prev, dlist_t * next)
 
 #define dlist_entry(e, t, m) ((t *)((char *)(e)-(unsigned long)(&((t *)0)->m)))
 
-static inline int dlist_empty(struct dlist_head * head)				{ return head->next == head; }
+static inline int  dlist_empty(struct dlist_head * head)			{ return head->next == head; }
 static inline void dlist_add(dlist_t * entry, dlist_t * head)		{ __dlist_add(entry, head, head->next); }
 static inline void dlist_add_tail(dlist_t * entry, dlist_t * head)	{ __dlist_add(entry, head->prev, head); }
 static inline void dlist_del(dlist_t * entry)
